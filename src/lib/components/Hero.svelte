@@ -13,7 +13,7 @@
 			We have alternatives of all your favourite fonts.
 		</h1>
 		<p
-			class="pt-2 text-sm text-[#616161]
+			class="pt-2 text-sm text-muted-foreground
 			md:text-base lg:text-xl"
 		>
 			Tired of using the same boring font? Here are alternatives for your favourite fonts – whether

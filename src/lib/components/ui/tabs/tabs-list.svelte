@@ -9,7 +9,10 @@
 </script>
 
 <TabsPrimitive.List
-	class={cn('inline-flex h-12 items-center justify-center text-muted-foreground', className)}
+	class={cn(
+		'inline-flex w-fit items-center  justify-center gap-0.5 bg-muted p-0.5 text-muted-foreground',
+		className
+	)}
 	{...$$restProps}
 >
 	<slot />
