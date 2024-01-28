@@ -4,14 +4,14 @@
 </script>
 
 <footer class="flex justify-between p-4 md:p-8 lg:p-12">
-	<p>© 2023 FontAlt. All rights reserved.</p>
-	<p>
+	<p class="text-muted-foreground" >© 2023 FontAlt. All rights reserved.</p>
+	<p class="text-muted-foreground" >
 		Made with ❤️ by
 		<a target="_blank" class="underline" href="https:///twitter.com/kuxshl">@kuxshl</a> &
 		<a target="_blank" class="underline" href="https:///twitter.com/jayeshvp24">@jayeshvp24</a>
 	</p>
 	<span>
-		<Button
+		<Button class="text-muted-foreground"
 			size="icon"
 			variant="ghost"
 			target="_blank"
