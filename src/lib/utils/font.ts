@@ -12,18 +12,20 @@ async function createSubtextFont(font: ArrayBuffer, text: string): Promise<Array
     if (!parsedFont) throw Error('font file does not exist');
 
     const notdefGlyph = parsedFont.glyphs.get(0);
-    notdefGlyph.unicode = 0;  // Set unicode for .notdef glyph
+    notdefGlyph.unicode = 0; // Set unicode for .notdef glyph
 
     const characters = Array.from(new Set(' ' + text));
 
     // Map characters to glyphs
-    const glyphs = characters.map(char => {
-        const glyph = parsedFont.charToGlyph(char);
-        if (glyph) {
-            glyph.unicode = char.codePointAt(0);  // Ensure unicode is set for each glyph
-        }
-        return glyph;
-    }).filter(glyph => glyph);  // Filter out undefined glyphs
+    const glyphs = characters
+        .map((char) => {
+            const glyph = parsedFont.charToGlyph(char);
+            if (glyph) {
+                glyph.unicode = char.codePointAt(0); // Ensure unicode is set for each glyph
+            }
+            return glyph;
+        })
+        .filter((glyph) => glyph); // Filter out undefined glyphs
 
     glyphs.unshift(notdefGlyph);
 
@@ -37,7 +39,6 @@ async function createSubtextFont(font: ArrayBuffer, text: string): Promise<Array
         glyphs
     });
 
-
     // Generate new .ttf buffer
     return subsetFont.toArrayBuffer();
 }
@@ -45,7 +46,7 @@ async function createSubtextFont(font: ArrayBuffer, text: string): Promise<Array
 function fontFileSize(buffer: ArrayBuffer) {
     const sizeInBytes = buffer.byteLength;
     const sizeInKilobytes = sizeInBytes / 1024;
-    return sizeInKilobytes.toFixed(2) + " KB";
+    return sizeInKilobytes.toFixed(2) + ' KB';
 }
 
 async function ttfToWoff2(fontBuffer: ArrayBuffer): Promise<Uint8Array> {
@@ -61,15 +62,15 @@ font-weight: 400;
 font-display: block;
 src: url(${fontAltFileURL(fontFamily)}) format('woff2');
 }
-`
-// src: url(https://fontalt.b-cdn.net/Astonpoliz.ttf) format('ttf');
+`;
+    // src: url(https://fontalt.b-cdn.net/Astonpoliz.ttf) format('ttf');
 }
 
 function fontAltFileURL(fontFamily: string): string {
-    return `${CDN_URL}/woff2/${fontAltFileName(fontFamily)}`
+    return `${CDN_URL}/woff2/${fontAltFileName(fontFamily)}`;
 }
 function fontAltFileName(fontFamily: string): string {
-    return `${fontFamily}-fontalt.woff2`
+    return `${fontFamily}-fontalt.woff2`;
 }
 
 export {
@@ -79,4 +80,4 @@ export {
     ttfToWoff2,
     fontAltFileURL,
     fontAltFileName
-}
+};

@@ -90,26 +90,26 @@ export async function applyFont(fontName: string, fileName: string) {
 }
 
 export function selectRandomItems<T>(arr: T[], numberOfItems: number): T[] {
-  // If the requested number of items is greater than the array length, return the original array
-  if (arr.length <= numberOfItems) {
-    return arr;
-  } else {
-    let result = [];
-    let indicesSelected = new Set(); // To keep track of selected indices
-    while (result.length < numberOfItems) {
-      let randomIndex = Math.floor(Math.random() * arr.length);
-      // Check if this index was already selected
-      if (!indicesSelected.has(randomIndex)) {
-        indicesSelected.add(randomIndex);
-        result.push(arr[randomIndex]);
-      }
+    // If the requested number of items is greater than the array length, return the original array
+    if (arr.length <= numberOfItems) {
+        return arr;
+    } else {
+        let result = [];
+        let indicesSelected = new Set(); // To keep track of selected indices
+        while (result.length < numberOfItems) {
+            let randomIndex = Math.floor(Math.random() * arr.length);
+            // Check if this index was already selected
+            if (!indicesSelected.has(randomIndex)) {
+                indicesSelected.add(randomIndex);
+                result.push(arr[randomIndex]);
+            }
+        }
+        return result;
     }
-    return result;
-  }
 }
 
 export async function createMapFromJson(jsonData: Object): Promise<Map<string, string>> {
-    console.log("start start")
+    console.log('start start');
     // const jsonData = await fs.readFile(fileName, 'utf-8');
     // console.log("file read - ", jsonData)
     // const mapArray = JSON.parse(jsonData);

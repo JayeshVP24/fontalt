@@ -1,19 +1,19 @@
 import { Redis } from '@upstash/redis';
 import promiser from '$lib/utils/promiser';
 // import { REDIS_TOKEN, REDIS_URL } from '$env/static/private';
-import fs from "fs/promises"
+import fs from 'fs/promises';
 
 const redis = new Redis({
     url: process.env.REDIS_URL!,
-    token: process.env.REDIS_TOKEN!,
-})
+    token: process.env.REDIS_TOKEN!
+});
 
-await exportRedisToJson(redis)
+await exportRedisToJson(redis);
 
 async function exportRedisToJson(upstashRedis: Redis) {
     try {
         // Get all keys
-        const [keysResponse,keysResponseError] = await promiser(upstashRedis.keys('*'))
+        const [keysResponse, keysResponseError] = await promiser(upstashRedis.keys('*'));
         if (keysResponseError) throw keysResponseError;
 
         const keys = keysResponse;
@@ -23,9 +23,11 @@ async function exportRedisToJson(upstashRedis: Redis) {
 
         // Iterate over each key to fetch its value
         for (const key of keys) {
-            const [valueResponse, valueResponsError] = await promiser(upstashRedis.get<string>(key))
+            const [valueResponse, valueResponsError] = await promiser(
+                upstashRedis.get<string>(key)
+            );
             if (valueResponsError) throw valueResponsError;
-            if(valueResponse) {
+            if (valueResponse) {
                 data[key] = valueResponse;
             }
         }

@@ -29,7 +29,7 @@ async function checkFileExists(redis: Redis, key: string): Promise<boolean> {
         throw Error(setError.message);
     }
     if (!data) {
-        return false
+        return false;
         // throw Error('Failed to get cache');
     }
     return data === 0 ? false : true;
