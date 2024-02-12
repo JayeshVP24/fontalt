@@ -26,7 +26,7 @@ const redis = new Redis({
 
 const map = await createMapFromJson(jsonData as Object);
 
-export const GET: RequestHandler = async ({ url, fetch }) => {
+export const GET: RequestHandler = async ({ url }) => {
     const startTime = performance.now();
 
     const font = url.searchParams.get('font');
@@ -49,8 +49,8 @@ export const GET: RequestHandler = async ({ url, fetch }) => {
     if (fileExists) {
         // console.log('cache hit');
 
-        const endTime = performance.now();
-        const processingTime = endTime - startTime;
+        // const endTime = performance.now();
+        // const processingTime = endTime - startTime;
         // console.log('Processing Time - ', processingTime);
         return new Response(
             // https://fontalt.b-cdn.net/Astonpoliz-subtext.woff2

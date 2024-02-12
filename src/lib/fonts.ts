@@ -190,7 +190,7 @@ const fonts: FontAlt[] = [
     {
         main: {
             title: 'Century Gothic',
-            fileName: 'Century Gothic',
+            fileName: 'Century-Gothic',
             link: 'https://www.myfonts.com/collections/century-gothic-font-monotype-imaging'
         },
         alternativeOne: {
@@ -234,17 +234,17 @@ const fonts: FontAlt[] = [
     {
         main: {
             title: 'Futura',
-            fileName: 'Futura Book font',
+            fileName: 'Futura-Book-font',
             link: 'https://fonts.adobe.com/fonts/futura-pt'
         },
         alternativeOne: {
             title: 'Avenir',
-            fileName: 'Avenir Book',
+            fileName: 'Avenir-Book',
             link: 'https://www.myfonts.com/collections/avenir-font-linotype'
         },
         alternativeTwo: {
             title: 'Fellix',
-            fileName: 'Fellix Regular',
+            fileName: 'Fellix-Regular',
             link: 'https://displaay.net/typeface/fellix/'
         },
         alternativeThree: {
@@ -288,7 +288,7 @@ const fonts: FontAlt[] = [
         },
         alternativeTwo: {
             title: 'Sinhala Sangam MN',
-            fileName: 'Sinhala Sangam MN',
+            fileName: 'Sinhala-Sangam-MN',
             link: 'https://eng.m.fontke.com/font/10415856/download/'
         },
         alternativeThree: {

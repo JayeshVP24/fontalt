@@ -5,6 +5,7 @@
     "scripts": {
         "dev": "vite dev",
         "build": "vite build",
+        "save": "bun run src/scripts/redisToJson.ts",
         "preview": "vite preview",
         "test": "npm run test:integration && npm run test:unit",
         "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
