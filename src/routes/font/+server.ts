@@ -47,11 +47,11 @@ export const GET: RequestHandler = async ({ url, fetch }) => {
     }
 
     if (fileExists) {
-        console.log('cache hit');
+        // console.log('cache hit');
 
         const endTime = performance.now();
         const processingTime = endTime - startTime;
-        console.log('Processing Time - ', processingTime);
+        // console.log('Processing Time - ', processingTime);
         return new Response(
             // https://fontalt.b-cdn.net/Astonpoliz-subtext.woff2
             createFontAltCSSFile(font),

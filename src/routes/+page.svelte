@@ -2,12 +2,9 @@
     import Hero from '$lib/components/Hero.svelte';
     import { page } from '$app/stores';
     import Search from '$lib/components/Search.svelte';
-    import { fly } from 'svelte/transition';
-    import fonts from '$lib/fonts';
     import FontCard from '$lib/components/ui/FontCard.svelte';
     import { onMount } from 'svelte';
     import { fontsLoaded } from '$lib';
-    import { cn } from '$lib/utils';
     import type { PageData } from './$types';
 
     $: style = $page.url.searchParams.get('style') || 'all';
@@ -27,6 +24,9 @@
         document.fonts.addEventListener('loadingdone', function () {
             $fontsLoaded = true;
         });
+        setTimeout(() => {
+            $fontsLoaded = true;
+        }, 3000);
     });
 
     $: if ($fontsLoaded) {
