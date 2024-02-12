@@ -26,7 +26,7 @@
 <div class="flex flex-col items-center border sm:flex-row">
     <h2
         class={`relative overflow-hidden py-6 sm:py-12 text-center text-xl sm:w-2/4
-		text-3xl fontalt-${font.main.title}`}
+		md:text-3xl fontalt-${font.main.title}`}
     >
         <span
             class={cn(
