@@ -2,6 +2,7 @@ interface Font {
     title: string | null;
     fileName: string | null;
     link: string | null;
+    type?: "sans-serif" | "serif" | "handwritten" | "display"
 }
 export interface FontAlt {
     main: Font;
@@ -15,7 +16,7 @@ const fonts: FontAlt[] = [
         main: {
             title: 'Circular Std',
             fileName: 'Circular',
-            link: 'https://lineto.com/typefaces/circular'
+            link: 'https://lineto.com/typefaces/circular',
         },
         alternativeOne: {
             title: 'Manrope',
