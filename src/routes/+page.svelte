@@ -24,9 +24,9 @@
         document.fonts.addEventListener('loadingdone', function () {
             $fontsLoaded = true;
         });
-        setTimeout(() => {
-            $fontsLoaded = true;
-        }, 3000);
+        // setTimeout(() => {
+        //     $fontsLoaded = true;
+        // }, 3000);
     });
 
     $: if ($fontsLoaded) {
