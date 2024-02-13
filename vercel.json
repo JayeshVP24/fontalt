@@ -1,0 +1,8 @@
+{
+    "rewrites": [
+        {
+            "source": "/wegotanalyticsbaby/:path(.*)",
+            "destination": "https://us.posthog.com/:path*"
+        }
+    ]
+}
