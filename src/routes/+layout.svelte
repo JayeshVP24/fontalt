@@ -5,9 +5,9 @@
     import { ModeWatcher } from 'mode-watcher';
     import posthog from 'posthog-js';
     import { page } from '$app/stores';
-    import { browser } from '$app/environment';
+    import { browser, dev } from '$app/environment';
 
-    if (browser) {
+    if (browser && !dev) {
         posthog.init(PUBLIC_POSTHOG_API_KEY, {
             api_host: $page.url.origin + '/wegotanalyticsbaby',
             ui_host: 'https://us.posthog.com'
