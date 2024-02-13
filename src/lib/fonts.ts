@@ -42,7 +42,7 @@ const fonts: FontAlt[] = [
         },
         alternativeOne: {
             title: 'Geist',
-            fileName: 'GeistVariableVF',
+            fileName: 'Geist-Regular',
             link: 'https://github.com/vercel/geist-font/releases/'
         },
         alternativeTwo: {
