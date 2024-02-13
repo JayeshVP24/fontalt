@@ -122,28 +122,28 @@ const fonts: FontAlt[] = [
             link: null
         }
     },
-    {
-        main: {
-            title: 'Poppins',
-            fileName: 'Poppins-Regular',
-            link: 'https://fonts.google.com/specimen/Poppins'
-        },
-        alternativeOne: {
-            title: null,
-            fileName: null,
-            link: null
-        },
-        alternativeTwo: {
-            title: null,
-            fileName: null,
-            link: null
-        },
-        alternativeThree: {
-            title: null,
-            fileName: null,
-            link: null
-        }
-    },
+    // {
+    //     main: {
+    //         title: 'Poppins',
+    //         fileName: 'Poppins-Regular',
+    //         link: 'https://fonts.google.com/specimen/Poppins'
+    //     },
+    //     alternativeOne: {
+    //         title: null,
+    //         fileName: null,
+    //         link: null
+    //     },
+    //     alternativeTwo: {
+    //         title: null,
+    //         fileName: null,
+    //         link: null
+    //     },
+    //     alternativeThree: {
+    //         title: null,
+    //         fileName: null,
+    //         link: null
+    //     }
+    // },
     {
         main: {
             title: 'Helvetica',

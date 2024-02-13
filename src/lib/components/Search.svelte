@@ -1,25 +1,44 @@
 <script lang="ts">
     import { Search } from 'lucide-svelte';
     import * as Tabs from '$lib/components/ui/tabs';
-    import { goto } from '$app/navigation';
+    import { afterNavigate, goto } from '$app/navigation';
     import { cn } from '$lib/utils';
+    import { afterUpdate, onMount } from 'svelte';
+    import { navigating, page } from '$app/stores';
+    import { browser } from '$app/environment';
+    import { queryParam } from 'sveltekit-search-params';
+
     export let style = 'all';
+
+    let query = queryParam('query');
+    let inputElement: HTMLInputElement;
+    // let buttonElement: HTMLButtonElement;
+    // $: if (browser) {
+    //     goto(`?style=${style}&query=${query}`, { replaceState: true });
+    // }
 </script>
 
 <section
     class="my-6 flex flex-col gap-4 sm:flex-row lg:my-12
 		lg:gap-6"
 >
-    <div class="flex flex-1 items-center gap-2 border px-3">
+    <button
+        class="flex flex-1 items-center gap-2 border px-3"
+        on:click={() => inputElement.focus()}
+        data-sveltekit-keepfocus
+    >
         <span class=" py-2 pr-1">
             <Search class="" />
         </span>
         <input
+            id="search"
+            bind:value={$query}
+            bind:this={inputElement}
             class="min-w-0 flex-1 text-ellipsis bg-transparent
 			text-lg outline-none"
             placeholder="Search your Favourite Font"
         />
-    </div>
+    </button>
     <Tabs.Root value={style} class="">
         <Tabs.List class="flex w-fit flex-wrap ">
             <a href="/?style=all" class={cn('h-full w-fit ')}>

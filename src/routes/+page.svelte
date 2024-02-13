@@ -8,7 +8,19 @@
     import type { PageData } from './$types';
 
     $: style = $page.url.searchParams.get('style') || 'all';
+    $: query = $page.url.searchParams.get('query') || '';
     export let data: PageData;
+
+    $: filteredFonts = data.randomFonts.filter((font) => {
+        if (query === '') return font;
+        if (
+            font.alternativeOne.title?.toLowerCase().includes(query.toLowerCase()) ||
+            font.alternativeTwo.title?.toLowerCase().includes(query.toLowerCase()) ||
+            font.alternativeThree.title?.toLowerCase().includes(query.toLowerCase()) ||
+            font.main.title?.toLowerCase().includes(query.toLowerCase())
+        )
+            return font;
+    });
 
     onMount(async () => {
         try {
@@ -41,7 +53,7 @@
         class="relative grid w-full grid-cols-1 gap-4 overflow-hidden
 		sm:grid-cols-2 md:grid-cols-3 lg:gap-8"
     >
-        {#each data.randomFonts as font}
+        {#each filteredFonts as font}
             <FontCard {font} />
         {/each}
         <!-- <p -->
