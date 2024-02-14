@@ -17,6 +17,7 @@ const fonts: FontAlt[] = [
             title: 'Circular Std',
             fileName: 'Circular',
             link: 'https://lineto.com/typefaces/circular',
+            type?: "sans-serif",
         },
         alternativeOne: {
             title: 'Manrope',
@@ -38,12 +39,14 @@ const fonts: FontAlt[] = [
         main: {
             title: 'Inter',
             fileName: 'Inter-Regular',
-            link: 'https://fonts.google.com/specimen/Inter'
+            link: 'https://fonts.google.com/specimen/Inter',
+            type?: "sans-serif",
         },
         alternativeOne: {
             title: 'Geist',
             fileName: 'Geist-Regular',
             link: 'https://github.com/vercel/geist-font/releases/'
+            type?: "sans-serif",
         },
         alternativeTwo: {
             title: 'Rubik',
@@ -60,7 +63,8 @@ const fonts: FontAlt[] = [
         main: {
             title: 'Bebas Neue',
             fileName: 'BebasNeue-Regular',
-            link: 'https://fonts.google.com/specimen/Bebas+Neue?query=bebas'
+            link: 'https://fonts.google.com/specimen/Bebas+Neue?query=bebas',
+            type?: "sans-serif",
         },
         alternativeOne: {
             title: 'Anton',
@@ -82,7 +86,8 @@ const fonts: FontAlt[] = [
         main: {
             title: 'Gilroy',
             fileName: 'Gilroy-Regular',
-            link: 'https://www.myfonts.com/collections/gilroy-font-radomir-tinkov'
+            link: 'https://www.myfonts.com/collections/gilroy-font-radomir-tinkov',
+            type?: "sans-serif",
         },
         alternativeOne: {
             title: 'Questrial',
@@ -104,7 +109,8 @@ const fonts: FontAlt[] = [
         main: {
             title: 'Satoshi',
             fileName: 'Satoshi-Variable',
-            link: 'https://www.fontshare.com/fonts/satoshi'
+            link: 'https://www.fontshare.com/fonts/satoshi',
+            type?: "sans-serif",
         },
         alternativeOne: {
             title: 'General Sans',
@@ -122,33 +128,35 @@ const fonts: FontAlt[] = [
             link: null
         }
     },
-    // {
-    //     main: {
-    //         title: 'Poppins',
-    //         fileName: 'Poppins-Regular',
-    //         link: 'https://fonts.google.com/specimen/Poppins'
-    //     },
-    //     alternativeOne: {
-    //         title: null,
-    //         fileName: null,
-    //         link: null
-    //     },
-    //     alternativeTwo: {
-    //         title: null,
-    //         fileName: null,
-    //         link: null
-    //     },
-    //     alternativeThree: {
-    //         title: null,
-    //         fileName: null,
-    //         link: null
-    //     }
-    // },
+    {
+        main: {
+            title: 'Poppins',
+            fileName: 'Poppins-Regular',
+            link: 'https://fonts.google.com/specimen/Poppins',
+            type?: "sans-serif",
+        },
+        alternativeOne: {
+            title: 'Lato',
+            fileName: null,
+            link: 'https://fonts.google.com/specimen/Lato'
+        },
+        alternativeTwo: {
+            title: 'Lexend',
+            fileName: null,
+            link: 'https://fonts.google.com/specimen/Lexend'
+        },
+        alternativeThree: {
+            title: 'ITC Avant Garde',
+            fileName: 'ITCAvantGarde',
+            link: 'https://www.myfonts.com/collections/avant-garde-gothic-font-itc'
+        }
+    },
     {
         main: {
             title: 'Helvetica',
             fileName: 'Helvetica',
-            link: 'https://www.linotype.com/1308886/helvetica-family.html'
+            link: 'https://www.linotype.com/1308886/helvetica-family.html',
+            type?: "sans-serif",
         },
         alternativeOne: {
             title: 'Work Sans',
@@ -170,7 +178,8 @@ const fonts: FontAlt[] = [
         main: {
             title: 'ITC Avant Garde',
             fileName: 'ITCAvantGarde',
-            link: 'https://www.myfonts.com/collections/avant-garde-gothic-font-itc'
+            link: 'https://www.myfonts.com/collections/avant-garde-gothic-font-itc',
+            type?: "sans-serif",
         },
         alternativeOne: {
             title: 'Filson Pro',
@@ -192,7 +201,8 @@ const fonts: FontAlt[] = [
         main: {
             title: 'Century Gothic',
             fileName: 'Century-Gothic',
-            link: 'https://www.myfonts.com/collections/century-gothic-font-monotype-imaging'
+            link: 'https://www.myfonts.com/collections/century-gothic-font-monotype-imaging',
+            type?: "sans-serif",
         },
         alternativeOne: {
             title: 'Satoshi',
@@ -214,7 +224,8 @@ const fonts: FontAlt[] = [
         main: {
             title: 'Impact',
             fileName: 'impact',
-            link: 'https://www.myfonts.com/collections/impact-font-urw?queryId=c0f0e7fbe4173813a509c001ea2b1f80&index=universal_search_data&objectIDs=8652499001'
+            link: 'https://www.myfonts.com/collections/impact-font-urw?queryId=c0f0e7fbe4173813a509c001ea2b1f80&index=universal_search_data&objectIDs=8652499001',
+            type?: "sans-serif",
         },
         alternativeOne: {
             title: 'Press Gothic',
@@ -236,7 +247,8 @@ const fonts: FontAlt[] = [
         main: {
             title: 'Futura',
             fileName: 'Futura-Book-font',
-            link: 'https://fonts.adobe.com/fonts/futura-pt'
+            link: 'https://fonts.adobe.com/fonts/futura-pt',
+            type?: "sans-serif",
         },
         alternativeOne: {
             title: 'Avenir',
@@ -258,7 +270,8 @@ const fonts: FontAlt[] = [
         main: {
             title: 'Satoshi',
             fileName: 'Satoshi-Variable',
-            link: 'https://www.fontshare.com/fonts/satoshi'
+            link: 'https://www.fontshare.com/fonts/satoshi',
+            type?: "sans-serif",
         },
         alternativeOne: {
             title: 'Basier Circle',
@@ -280,7 +293,8 @@ const fonts: FontAlt[] = [
         main: {
             title: 'Basier Square',
             fileName: 'BasierSquare-Regular',
-            link: 'https://www.atipofoundry.com/fonts/basier'
+            link: 'https://www.atipofoundry.com/fonts/basier',
+            type?: "sans-serif",
         },
         alternativeOne: {
             title: 'SF Pro',
@@ -302,7 +316,8 @@ const fonts: FontAlt[] = [
         main: {
             title: 'Roboto',
             fileName: 'Roboto-Regular',
-            link: 'https://fonts.google.com/specimen/Roboto'
+            link: 'https://fonts.google.com/specimen/Roboto',
+            type?: "sans-serif",
         },
         alternativeOne: {
             title: 'Inter',
@@ -324,7 +339,8 @@ const fonts: FontAlt[] = [
         main: {
             title: 'Montserrat',
             fileName: 'Montserrat-Regular',
-            link: 'https://fonts.google.com/specimen/Montserrat?query=Montserrat'
+            link: 'https://fonts.google.com/specimen/Montserrat?query=Montserrat',
+            type?: "sans-serif",
         },
         alternativeOne: {
             title: 'Work Sans',
@@ -346,7 +362,8 @@ const fonts: FontAlt[] = [
         main: {
             title: 'Nunito',
             fileName: 'Nunito-Regular',
-            link: 'https://fonts.google.com/specimen/Nunito?query=Nunito'
+            link: 'https://fonts.google.com/specimen/Nunito?query=Nunito',
+            type?: "sans-serif",
         },
         alternativeOne: {
             title: 'Rubik',
