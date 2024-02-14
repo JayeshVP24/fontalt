@@ -2,25 +2,9 @@
     import type { FontAlt } from '$lib/fonts';
     import { Separator } from '$lib/components/ui/separator';
     import { fontsLoaded } from '$lib';
-    import { onMount } from 'svelte';
-    import { applyFont, cn } from '$lib/utils';
+    import { cn } from '$lib/utils';
 
     export let font: FontAlt;
-    // onMount(async () => {
-    //     const fontArray = [
-    //         font.main,
-    //         font.alternativeOne,
-    //         font.alternativeTwo,
-    //         font.alternativeThree
-    //     ];
-    //     try {
-    //         for (const font of fontArray) {
-    //             applyFont(font.title, fontUrl);
-    //         }
-    //     } catch (error) {
-    //         console.error('Error fetching font:', error);
-    //     }
-    // });
 </script>
 
 <div class="flex flex-col items-center border sm:flex-row">
@@ -28,8 +12,8 @@
         href={font.main.link}
         target="_blank"
         class={`relative overflow-hidden h-full flex items-center
-justify-center text-center text-xl sm:w-2/4
-md:text-3xl fontalt-${font.main.title} hover:bg-accent`}
+justify-center text-center text-2xl sm:w-2/4
+md:text-3xl py-8 hover:bg-accent`}
     >
         <h2
             class={cn(
@@ -56,7 +40,7 @@ md:text-3xl fontalt-${font.main.title} hover:bg-accent`}
     <Separator class="hidden sm:block" orientation="vertical" />
     <ul
         class="flex w-full min-w-44 flex-col items-center sm:w-2/4
-        justify-center"
+        justify-center text-accent-foreground"
     >
         <a
             href={font.alternativeOne.link}

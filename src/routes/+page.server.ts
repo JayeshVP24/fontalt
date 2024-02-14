@@ -1,10 +1,10 @@
-import { error } from '@sveltejs/kit';
+// import { error } from '@sveltejs/kit';
 import type { PageServerLoad } from './$types';
 import fonts from '$lib/fonts';
-import { selectRandomItems } from '$lib/utils';
+// import { selectRandomItems } from '$lib/utils';
 
 export const load: PageServerLoad = async ({ fetch }) => {
-    const randomFonts = selectRandomItems(fonts, 10);
+    // const randomFonts = selectRandomItems(fonts, 10);
     async function getCss() {
         let cssText = '';
         for (const font of fonts) {

@@ -31,6 +31,6 @@
             <span class="sr-only">Toggle theme</span>
         </Button>
 
-        <Button size="lg">Submit fonts</Button>
+        <Button href="https://tally.so/r/3lddgV" target="_blank" size="lg">Submit fonts</Button>
     </div>
 </section>

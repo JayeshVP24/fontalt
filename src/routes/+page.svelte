@@ -6,20 +6,29 @@
     import { onMount } from 'svelte';
     import { fontsLoaded } from '$lib';
     import type { PageData } from './$types';
+    import { queryParam } from 'sveltekit-search-params';
 
-    $: style = $page.url.searchParams.get('style') || 'all';
-    $: query = $page.url.searchParams.get('query') || '';
+    let query = queryParam('query');
+    let style = queryParam('style');
     export let data: PageData;
 
+    let filteredFonts = data.randomFonts;
+
     $: filteredFonts = data.randomFonts.filter((font) => {
-        if (query === '') return font;
+        if (!$query || $query === '') return font;
         if (
-            font.alternativeOne.title?.toLowerCase().includes(query.toLowerCase()) ||
-            font.alternativeTwo.title?.toLowerCase().includes(query.toLowerCase()) ||
-            font.alternativeThree.title?.toLowerCase().includes(query.toLowerCase()) ||
-            font.main.title?.toLowerCase().includes(query.toLowerCase())
-        )
+            font.alternativeOne.title?.toLowerCase().includes($query.toLowerCase()) ||
+            font.alternativeTwo.title?.toLowerCase().includes($query.toLowerCase()) ||
+            font.alternativeThree.title?.toLowerCase().includes($query.toLowerCase()) ||
+            font.main.title?.toLowerCase().includes($query.toLowerCase())
+        ) {
+            $style = 'all';
             return font;
+        }
+    });
+    $: filteredFonts = data.randomFonts.filter((font) => {
+        if (!$style || $style === 'all') return font;
+        if (font.main.type?.toLowerCase() === $style.toLowerCase()) return font;
     });
 
     onMount(async () => {
@@ -48,30 +57,13 @@
 
 <main class="p-4 md:p-8 lg:p-12">
     <Hero />
-    <Search bind:style />
+    <Search />
     <div
         class="relative grid w-full grid-cols-1 gap-4 overflow-hidden
-		sm:grid-cols-2 md:grid-cols-3 lg:gap-8"
+		sm:grid-cols-2 lg:grid-cols-3 lg:gap-8"
     >
         {#each filteredFonts as font}
             <FontCard {font} />
         {/each}
-        <!-- <p -->
-        <!--     class={cn( -->
-        <!--         `absolute left-1 translate-y-0 text-4xl transition-transform duration-700`, -->
-        <!--         $fontsLoaded && `-translate-y-21` -->
-        <!--     )} -->
-        <!-- > -->
-        <!--     Astonpoliz -->
-        <!-- </p> -->
-        <!-- <p -->
-        <!--     style="font-family: 'Astonpoliz', sans; font-display: swap;" -->
-        <!--     class={cn( -->
-        <!--         `relative translate-y-20 text-4xl transition-transform duration-700`, -->
-        <!--         $fontsLoaded && `translate-y-0` -->
-        <!--     )} -->
-        <!-- > -->
-        <!--     Astonpoliz -->
-        <!-- </p> -->
     </div>
 </main>

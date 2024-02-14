@@ -1,25 +1,43 @@
 <script lang="ts">
-    import { Search } from 'lucide-svelte';
+    import { Menu, Search } from 'lucide-svelte';
     import * as Tabs from '$lib/components/ui/tabs';
-    import { afterNavigate, goto } from '$app/navigation';
+    import * as DropdownMenu from '$lib/components/ui/dropdown-menu';
+    import { goto } from '$app/navigation';
     import { cn } from '$lib/utils';
-    import { afterUpdate, onMount } from 'svelte';
-    import { navigating, page } from '$app/stores';
-    import { browser } from '$app/environment';
     import { queryParam } from 'sveltekit-search-params';
-
-    export let style = 'all';
+    import { Button } from './ui/button';
 
     let query = queryParam('query');
+    let style = queryParam('style');
+
     let inputElement: HTMLInputElement;
-    // let buttonElement: HTMLButtonElement;
-    // $: if (browser) {
-    //     goto(`?style=${style}&query=${query}`, { replaceState: true });
-    // }
+
+    const styles: { label: string; href: string; value: string }[] = [
+        {
+            label: 'All',
+            href: '/?style=all',
+            value: 'all'
+        },
+        {
+            label: 'Sans-Serif',
+            href: '/?style=sans-serif',
+            value: 'sans-serif'
+        },
+        {
+            label: 'Serif',
+            href: '/?style=serif',
+            value: 'serif'
+        },
+        {
+            label: 'Handwritten',
+            href: '/?style=handwritten',
+            value: 'handwritten'
+        }
+    ];
 </script>
 
 <section
-    class="my-6 flex flex-col gap-4 sm:flex-row lg:my-12
+    class="my-6 flex flex-row gap-2 lg:my-12
 		lg:gap-6"
 >
     <button
@@ -39,42 +57,33 @@
             placeholder="Search your Favourite Font"
         />
     </button>
-    <Tabs.Root value={style} class="">
+    <Tabs.Root value={$style || 'all'} class="hidden sm:block">
         <Tabs.List class="flex w-fit flex-wrap ">
-            <a href="/?style=all" class={cn('h-full w-fit ')}>
-                <Tabs.Trigger
-                    value="all"
-                    on:click={() => goto('/?style=all', { replaceState: true })}>All</Tabs.Trigger
-                >
-            </a>
-            <a href="/?style=sans-serif" class="h-full w-fit">
-                <Tabs.Trigger
-                    value="sans-serif"
-                    on:click={() => goto('/?style=sans-serif', { replaceState: true })}
-                    >Sans Serif</Tabs.Trigger
-                >
-            </a>
-            <a href="/?style=serif" class="h-full w-fit">
-                <Tabs.Trigger
-                    value="serif"
-                    on:click={() => goto('/?style=serif', { replaceState: true })}
-                    >Serif</Tabs.Trigger
-                >
-            </a>
-            <a href="/?style=handwritten" class="h-full w-fit">
-                <Tabs.Trigger
-                    value="handwritten"
-                    on:click={() => goto('/?style=handwritten', { replaceState: true })}
-                    >Handwritten</Tabs.Trigger
-                >
-            </a>
-            <a href="/?display" class="h-full w-fit">
-                <Tabs.Trigger
-                    value="display"
-                    on:click={() => goto('/?style=display', { replaceState: true })}
-                    >Display</Tabs.Trigger
-                >
-            </a>
+            {#each styles as style}
+                <span class={cn('h-full w-fit ')}>
+                    <Tabs.Trigger
+                        value={style.value}
+                        on:click={() => goto(style.href, { replaceState: true })}
+                        >{style.label}</Tabs.Trigger
+                    >
+                </span>
+            {/each}
         </Tabs.List>
     </Tabs.Root>
+    <DropdownMenu.Root>
+        <DropdownMenu.Trigger class="sm:hidden">
+            <Button variant="outline" size="icon">
+                <Menu />
+            </Button>
+        </DropdownMenu.Trigger>
+        <DropdownMenu.Content>
+            <DropdownMenu.Group>
+                {#each styles as style}
+                    <DropdownMenu.Item on:click={() => goto(style.href, { replaceState: true })}
+                        >{style.label}</DropdownMenu.Item
+                    >
+                {/each}
+            </DropdownMenu.Group>
+        </DropdownMenu.Content>
+    </DropdownMenu.Root>
 </section>
