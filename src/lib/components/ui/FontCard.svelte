@@ -17,19 +17,18 @@ md:text-3xl py-8 hover:bg-accent`}
     >
         <h2
             class={cn(
-                `absolute left-2/4 top-2/4 block
--translate-x-2/4 -translate-y-2/4 transition-transform duration-700`,
-                $fontsLoaded && `-translate-y-72`,
+                `absolute left-2/4 top-2/4 block -translate-x-2/4 -translate-y-2/4 transition-all duration-700`,
+                $fontsLoaded && `-translate-y-12 opacity-0`,
                 !font.main.title && `invisible`
             )}
         >
             {font.main.title}
         </h2>
         <h2
-            style={`font-family: ${font.main.fileName}, sans; font-display: swap;`}
+            style={`font-family: ${font.main.fileName}, Inter, sans; font-display: swap;`}
             class={cn(
-                `relative block translate-y-72 transition-transform duration-700`,
-                $fontsLoaded && `translate-y-0`,
+                `relative block opacity-0 translate-y-12 transition-all duration-700`,
+                $fontsLoaded && `translate-y-0 opacity-1`,
                 !font.main.title && `invisible`
             )}
         >
@@ -49,19 +48,18 @@ md:text-3xl py-8 hover:bg-accent`}
         >
             <li
                 class={cn(
-                    `absolute left-2/4 top-2/4 block w-max
--translate-x-2/4 -translate-y-2/4 transition-transform duration-700`,
-                    $fontsLoaded && `-translate-y-72`,
+                    `absolute left-2/4 top-2/4 block -translate-x-2/4 -translate-y-2/4 transition-all duration-700`,
+                    $fontsLoaded && `-translate-y-12 opacity-0`,
                     !font.alternativeOne.title && `invisible`
                 )}
             >
                 {font.alternativeOne.title}
             </li>
             <li
-                style={`font-family: ${font.alternativeOne.fileName}, sans; font-display: swap;`}
+                style={`font-family: ${font.alternativeOne.fileName}, Inter, sans; font-display: swap;`}
                 class={cn(
-                    `relative block translate-y-72 transition-transform duration-700`,
-                    $fontsLoaded && `translate-y-0`,
+                    `relative block opacity-0 translate-y-12 transition-all duration-700`,
+                    $fontsLoaded && `translate-y-0 opacity-1`,
                     !font.alternativeOne.title && `invisible`
                 )}
             >
@@ -76,19 +74,19 @@ md:text-3xl py-8 hover:bg-accent`}
         >
             <li
                 class={cn(
-                    `absolute left-2/4 top-2/4 block w-max
--translate-x-2/4 -translate-y-2/4 transition-transform duration-700`,
-                    $fontsLoaded && `-translate-y-72`,
+                    `absolute left-2/4 top-2/4 block -translate-x-2/4 -translate-y-2/4 transition-all duration-700`,
+                    $fontsLoaded && `-translate-y-12 opacity-0`,
                     !font.alternativeTwo.title && `invisible`
                 )}
             >
                 {font.alternativeTwo.title}
             </li>
             <li
-                style={`font-family: ${font.alternativeTwo.fileName}, sans; font-display: swap;`}
+                style={`font-family: ${font.alternativeTwo.fileName},
+Inter,sans; font-display: swap;`}
                 class={cn(
-                    `relative block translate-y-72 transition-transform duration-700`,
-                    $fontsLoaded && `translate-y-0`,
+                    `relative block opacity-0 translate-y-12 transition-all duration-700`,
+                    $fontsLoaded && `translate-y-0 opacity-1`,
                     !font.alternativeTwo.title && `invisible`
                 )}
             >
@@ -104,9 +102,8 @@ md:text-3xl py-8 hover:bg-accent`}
         >
             <li
                 class={cn(
-                    `absolute left-2/4 top-2/4 block w-max
--translate-x-2/4 -translate-y-2/4 transition-transform duration-700`,
-                    $fontsLoaded && `-translate-y-72`,
+                    `absolute left-2/4 top-2/4 block -translate-x-2/4 -translate-y-2/4 transition-all duration-700`,
+                    $fontsLoaded && `-translate-y-12 opacity-0`,
                     !font.alternativeThree.title && `invisible`
                 )}
             >
@@ -115,8 +112,8 @@ md:text-3xl py-8 hover:bg-accent`}
             <li
                 style={`font-family: ${font.alternativeThree.fileName}, sans; font-display: swap;`}
                 class={cn(
-                    `relative block translate-y-72 transition-transform duration-700`,
-                    $fontsLoaded && `translate-y-0`,
+                    `relative block opacity-0 translate-y-12 transition-all duration-700`,
+                    $fontsLoaded && `translate-y-0 opacity-1`,
                     !font.alternativeThree.title && `invisible`
                 )}
             >
