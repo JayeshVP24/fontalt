@@ -91,6 +91,9 @@ devDependencies:
   svelte-check:
     specifier: ^3.6.0
     version: 3.6.4(postcss@8.4.35)(svelte@4.2.10)
+  svelte-seo:
+    specifier: ^1.6.0
+    version: 1.6.0(typescript@5.3.3)
   tailwindcss:
     specifier: ^3.4.1
     version: 3.4.1
@@ -2586,6 +2589,14 @@ packages:
       rimraf: 2.7.1
     dev: true
 
+  /schema-dts@1.1.2(typescript@5.3.3):
+    resolution: {integrity: sha512-MpNwH0dZJHinVxk9bT8XUdjKTxMYrA5bLtrrGmFA6PTLwlOKnhi67XoRd6/ty+Djt6ZC0slR57qFhZDNMI6DhQ==}
+    peerDependencies:
+      typescript: '>=4.1.0'
+    dependencies:
+      typescript: 5.3.3
+    dev: true
+
   /semver@6.3.1:
     resolution: {integrity: sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==}
     hasBin: true
@@ -2846,6 +2857,14 @@ packages:
       strip-indent: 3.0.0
       svelte: 4.2.10
       typescript: 5.3.3
+    dev: true
+
+  /svelte-seo@1.6.0(typescript@5.3.3):
+    resolution: {integrity: sha512-xgyJ2evRrgukCIOl4EMNrXyKXAQxJVYchqw9iTG1pv143bQ9vnI/wrrI1ew+fOLVRnU7yuJVdvgKUSD+sZXXtg==}
+    dependencies:
+      schema-dts: 1.1.2(typescript@5.3.3)
+    transitivePeerDependencies:
+      - typescript
     dev: true
 
   /svelte@4.2.10:

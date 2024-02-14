@@ -3,6 +3,7 @@ node_modules
 /build
 /.svelte-kit
 /.vercel
+/fonts
 /package
 .env
 .env.*
