@@ -10,7 +10,7 @@
             class=" text-2xl font-medium md:text-4xl
 			lg:text-5xl xl:text-6xl"
         >
-            We have alternatives of all your favourite fonts.
+            We have alternatives for all of your favourite fonts
         </h1>
         <p
             class="pt-2 text-sm text-muted-foreground
