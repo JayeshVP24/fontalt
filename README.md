@@ -1,3 +1,7 @@
+<img width="110" alt="fonalt-icon" src="https://github.com/JayeshVP24/fontalt/assets/59532173/b756f49c-fc74-4e89-aec2-a7571b640cad">
+
+# Font Alt
+
 ### Are you Tired of always using the same Generic Fonts?
 <img width="640" alt="fontalt_github_banner" src="https://github.com/JayeshVP24/fontalt/assets/96841144/b5beece1-1bdb-4803-a0d6-c25ce9b24dfc">
 <br></br>
