@@ -379,7 +379,54 @@ const fonts: FontAlt[] = [
             fileName: null,
             link: null
         }
+    },
+    {
+        main: {
+            title: 'DM Serif Display',
+            fileName: 'DMSerifDisplay-Regular',
+            link: 'https://fonts.google.com/specimen/DM+Serif+Display',
+            type: "serif",
+        },
+        alternativeOne: {
+            title: 'Frank Ruhl Libre',
+            fileName: 'FrankRuhlLibre-Regular',
+            link: 'https://fonts.google.com/specimen/Frank+Ruhl+Libre'
+        },
+        alternativeTwo: {
+            title: 'Playfair Display SC',
+            fileName: 'PlayfairDisplaySC-Regular',
+            link: 'https://fonts.google.com/specimen/Playfair+Display+SC'
+        },
+        alternativeThree: {
+            title: null,
+            fileName: null,
+            link: null
+        }
+    },
+    {
+        main: {
+            title: 'Comic Sans',
+            fileName: 'ComicSansMS3',
+            link: 'https://www.wfonts.com/font/comic-sans-ms',
+            type: "handwritten",
+        },
+        alternativeOne: {
+            title: 'Itim',
+            fileName: 'Itim-Regular',
+            link: 'https://fonts.google.com/specimen/Itim'
+        },
+        alternativeTwo: {
+            title: 'Comic Neue',
+            fileName: 'ComicNeue-Regular',
+            link: 'https://fonts.google.com/specimen/Comic+Neue'
+        },
+        alternativeThree: {
+            title: 'Pangram Sans Rounded',
+            fileName: 'PangramSansRounded-Regular',
+            link: 'https://pangrampangram.com/products/pangram-sans-rounded'
+        }
     }
+    
 ];
 
 export default fonts;
