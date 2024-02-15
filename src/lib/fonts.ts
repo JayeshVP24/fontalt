@@ -379,22 +379,22 @@ const fonts: FontAlt[] = [
             fileName: null,
             link: null
         }
-    }
+    },
     {
         main: {
             title: 'DM Serif Display',
-            fileName: null,
+            fileName: 'DMSerifDisplay-Regular',
             link: 'https://fonts.google.com/specimen/DM+Serif+Display',
             type: "serif",
         },
         alternativeOne: {
             title: 'Frank Ruhl Libre',
-            fileName: null,
+            fileName: 'FrankRuhlLibre-Regular',
             link: 'https://fonts.google.com/specimen/Frank+Ruhl+Libre'
         },
         alternativeTwo: {
             title: 'Playfair Display SC',
-            fileName: null,
+            fileName: 'PlayfairDisplaySC-Regular',
             link: 'https://fonts.google.com/specimen/Playfair+Display+SC'
         },
         alternativeThree: {
@@ -402,28 +402,28 @@ const fonts: FontAlt[] = [
             fileName: null,
             link: null
         }
-    }
+    },
     {
         main: {
             title: 'Comic Sans',
-            fileName: null,
+            fileName: 'ComicSansMS3',
             link: 'https://www.wfonts.com/font/comic-sans-ms',
             type: "handwritten",
         },
         alternativeOne: {
-            title: 'Pangram Sans Rounded',
-            fileName: null,
-            link: 'https://pangrampangram.com/products/pangram-sans-rounded'
+            title: 'Itim',
+            fileName: 'Itim-Regular',
+            link: 'https://fonts.google.com/specimen/Itim'
         },
         alternativeTwo: {
             title: 'Comic Neue',
-            fileName: null,
+            fileName: 'ComicNeue-Regular',
             link: 'https://fonts.google.com/specimen/Comic+Neue'
         },
         alternativeThree: {
-            title: 'Itim',
-            fileName: null,
-            link: 'https://fonts.google.com/specimen/Itim'
+            title: 'Pangram Sans Rounded',
+            fileName: 'PangramSansRounded-Regular',
+            link: 'https://pangrampangram.com/products/pangram-sans-rounded'
         }
     }
     
