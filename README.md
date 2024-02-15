@@ -13,4 +13,4 @@ If your font is not on our website or you want to suggest some alternatives, [su
 
 Built by [@jayesh](https://twitter.com/jayeshvp24) and [@kuxshl](https://twitter.com/kuxshl) 
 
-If you like our project, your support will be greatly appreciated.
+Star this repo if you like this project
