@@ -181,14 +181,14 @@ const fonts: FontAlt[] = [
             type: "sans-serif",
         },
         alternativeOne: {
-            title: 'Filson Pro',
-            fileName: 'FilsonPro-Regular',
-            link: 'https://www.motyfo.com/font-family/filson-pro/'
-        },
-        alternativeTwo: {
             title: 'Poppins',
             fileName: 'Poppins-Regular',
             link: 'https://fonts.google.com/specimen/Poppins'
+        },
+        alternativeTwo: {
+            title: null,
+            fileName: null,
+            link: null
         },
         alternativeThree: {
             title: null,
